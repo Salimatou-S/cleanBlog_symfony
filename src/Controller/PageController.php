@@ -19,6 +19,7 @@ class PageController extends AbstractController
     #[Route('/contact', name: 'page_contact')]
     public function contact(): Response
     {
+        $this->addFlash('success', 'voici le formulaire');
         return $this->render('page/contact.html.twig', [
             'controller_name' => 'PageController',
         ]);
