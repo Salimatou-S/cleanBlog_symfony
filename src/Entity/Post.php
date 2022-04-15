@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 #[ORM\Entity(repositoryClass: PostRepository::class)]
 class Post
@@ -16,6 +17,7 @@ class Post
     #[ORM\Column(type: 'string', length: 255)]
     private $title;
 
+    #[Gedmo\Slug(fields:['title'])]
     #[ORM\Column(type: 'string', length: 255)]
     private $slug;
 
@@ -24,6 +26,11 @@ class Post
 
     #[ORM\Column(type: 'string', length: 255)]
     private $image;
+
+    /**
+     * @Gedmo\Timestampable(on="create")
+     */
+
 
     #[ORM\Column(type: 'datetime_immutable')]
     private $createdAt;
@@ -61,13 +68,13 @@ class Post
         return $this->slug;
     }
 
-    public function setSlug(string $slug): self
+/*     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
 
         return $this;
     }
-
+ */
     public function getContent(): ?string
     {
         return $this->content;
@@ -97,13 +104,13 @@ class Post
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+/*     public function setCreatedAt(\DateTimeImmutable $createdAt): self
     {
         $this->createdAt = $createdAt;
 
         return $this;
     }
-
+ */
     public function getActive(): ?bool
     {
         return $this->active;
