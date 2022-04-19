@@ -11188,7 +11188,7 @@ header.masthead .post-heading .meta a {
     padding-top: 12.5rem;
     padding-bottom: 12.5rem;
   }
-  header.masthead .page-heading h1, header.masthead .page-heading .h1,
+header.masthead .page-heading h1, header.masthead .page-heading .h1,
 header.masthead .site-heading h1,
 header.masthead .site-heading .h1 {
     font-size: 5rem;
@@ -11245,4 +11245,7 @@ header.masthead .site-heading .h1 {
   .post-preview > a > .post-title {
     font-size: 2.25rem;
   }
+}
+.post-content img{
+  width: 100%;
 }

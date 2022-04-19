@@ -1,6 +1,11 @@
 {% extends 'clean.html.twig' %}
 
-{% block title %}Ajout d'une catégorie
+{% block title %}Ajout d'un article
+{% endblock %}
+
+{% block title_header %}{% endblock %}
+
+{% block subtitle_header %}test de sous-titre
 {% endblock %}
 
 {% block body %}
@@ -9,10 +14,11 @@
 		<div class="container px-4 px-lg-5">
 			<div class="row gx-4 gx-lg-5 justify-content-center">
 				<div class="col-md-10 col-lg-8 col-xl-7">
-					<h1>Ajout d'une catégorie</h1>
+					<h1>Ajout d'un article</h1>
 					{{ form(form) }}
 				</div>
 			</div>
 		</div>
 	</article>
+
 {% endblock %}
