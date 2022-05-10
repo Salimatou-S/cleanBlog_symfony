@@ -6,8 +6,8 @@
 <main>
     <div class="container-fluid px-4">
     
-                    <h1>Liste des catégories</h1>
-                    {{dump(categories)}}
+                    <h1>Liste des catégories  <a href="{{ path('admin_category_add') }}" class="btn btn-primary">Ajouter</a></h1>
+
 
                     <div class="card mb-4">
                         <div class="card-header">
@@ -21,7 +21,7 @@
                                         <th>ID</th>
                                         <th>Nom</th>
                                         <th>Slug</th>
-                                        <th></th>
+                                        <th>Parent</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -31,7 +31,7 @@
                                         <th>ID</th>
                                         <th>Nom</th>
                                         <th>Slug</th>
-                                        <th></th>
+                                        <th>Parent</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -42,7 +42,7 @@
                                         <td>{{category.id}}</td>
                                         <td>{{category.name}}</td>
                                         <td>{{category.slug}}</td>
-                                        <td></td>
+                                        <td>{{category.parent}}</td>
                                         <td></td>
                                         <td></td>
                                     </tr>

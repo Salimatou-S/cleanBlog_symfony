@@ -42,7 +42,7 @@ class CategoryController extends AbstractController
             $em = $this->$doctrine->getManager();
             $em->persist($category);
             $em->flush();
-            return $this->redirectToRoute('admin_home');
+            return $this->redirectToRoute('admin_category_index');
         }
 
         return $this->render('admin/category/add.html.twig', [
